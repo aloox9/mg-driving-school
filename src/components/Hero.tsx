@@ -59,7 +59,7 @@ export default function Hero() {
 
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
         {/* Left Column: Content */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left">
+        <div className="lg:col-span-6 flex flex-col items-start text-left">
           <AnimatedSection direction="up" delay={0.1}>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-bg-card text-[11px] font-mono font-medium uppercase tracking-[0.2em] text-accent mb-6">
               Mohammad Ghaddar School
@@ -122,8 +122,8 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Visual Asset with 3D Tilt Interaction */}
-        <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
-          <AnimatedSection direction="left" delay={0.3} className="relative w-full max-w-[500px] aspect-[4/3] sm:aspect-square lg:aspect-[4/5] perspective-[1000px]">
+        <div className="lg:col-span-6 w-full flex justify-center lg:justify-end">
+          <AnimatedSection direction="left" delay={0.3} className="relative w-full max-w-[600px] aspect-[16/9] perspective-[1000px]">
             {/* Ambient amber glow behind the image frame */}
             <div className="absolute -inset-1 bg-gradient-to-r from-accent to-amber-600 rounded-2xl blur-xl opacity-20" />
             
