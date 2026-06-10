@@ -7,6 +7,8 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import heroCar from "../../public/images/hero-car.png";
 
+const basePath = "/mg-driving-school";
+
 export default function Hero() {
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
     e.preventDefault();
@@ -141,16 +143,17 @@ export default function Hero() {
                 className="relative w-full h-full"
                 style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }} // Pop photo forward in 3D space
               >
-                <Image
-                  src={heroCar}
-                  alt="White hatchback instruction car with learner plate driving at sunset"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 500px"
-                  className="object-cover object-center"
+                <video
+                  src={`${basePath}/videos/hero-video.mp4`}
+                  poster={heroCar.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover object-center"
                 />
                 {/* Sleek overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
             </motion.div>
           </AnimatedSection>
