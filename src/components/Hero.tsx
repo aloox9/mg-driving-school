@@ -5,6 +5,7 @@ import Button from "./Button";
 import AnimatedSection from "./AnimatedSection";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import heroCar from "../../public/images/hero-car.png";
 
 export default function Hero() {
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, href: string) => {
@@ -141,7 +142,7 @@ export default function Hero() {
                 style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }} // Pop photo forward in 3D space
               >
                 <Image
-                  src="/images/hero-car.png"
+                  src={heroCar}
                   alt="White hatchback instruction car with learner plate driving at sunset"
                   fill
                   priority
